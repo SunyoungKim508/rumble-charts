@@ -14,9 +14,12 @@
     "storybook-server": "./node_modules/.bin/start-storybook -p 9001",
     "storybook-build": "./node_modules/.bin/build-storybook -o storybook",
     "publish-docs": "npm run styleguide-build && npm run gh-pages",
-    "publish-patch": "npm test && npm run build && npm version patch && npm publish",
-    "publish-minor": "npm test && npm run build && npm version minor && npm publish",
-    "publish-major": "npm test && npm run build && npm version major && npm publish"
+    "publish-patch":
+      "npm test && npm run build && npm version patch && npm publish",
+    "publish-minor":
+      "npm test && npm run build && npm version minor && npm publish",
+    "publish-major":
+      "npm test && npm run build && npm version major && npm publish"
   },
   "repository": {
     "type": "git",
@@ -74,24 +77,21 @@
     "jest": "^22.0.0",
     "jest-cli": "^21.2.1",
     "raf": "^3.4.0",
-    "react": "0.14.x || >=15.0.0 || 16.0.x",
-    "react-dom": "0.14.x || >=15.0.0 || 16.0.x",
+    "react": "0.14.x || >=15.0.0 || 16.3.x",
+    "react-dom": "0.14.x || >=15.0.0 || 16.3.x",
     "react-styleguidist": "^6.0.31",
     "react-test-renderer": "^16.0.0"
   },
   "peerDependencies": {
-    "react": "0.14.x || >=15.0.0 || 16.0.x",
-    "react-dom": "0.14.x || >=15.0.0 || 16.0.x"
+    "react": "0.14.x || >=15.0.0 || 16.3.x",
+    "react-dom": "0.14.x || >=15.0.0 || 16.3.x"
   },
   "jest": {
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
     },
     "testRegex": "/tests/.*_spec\\.js",
-    "roots": [
-      "<rootDir>/tests",
-      "<rootDir>/src"
-    ],
+    "roots": ["<rootDir>/tests", "<rootDir>/src"],
     "setupTestFrameworkScriptFile": "./tests/init.js",
     "coverageDirectory": "./coverage/",
     "collectCoverage": true,
@@ -99,8 +99,6 @@
       "<rootDir>/node_modules/",
       "<rootDir>/tests/"
     ],
-    "setupFiles": [
-      "raf/polyfill"
-    ]
+    "setupFiles": ["raf/polyfill"]
   }
 }
